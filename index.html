@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaGrowth — Digital Growth Platform</title>
 
-<title>GrowthAI – Marketing Automation</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,130 +13,128 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 }
 
 body{
-background:#05070f;
+background:#0f172a;
 color:white;
-overflow-x:hidden;
-}
-
-/* NAV */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 10%;
-position:fixed;
-width:100%;
-top:0;
-backdrop-filter:blur(10px);
-}
-
-.logo{
-font-weight:600;
-font-size:20px;
-}
-
-nav a{
-color:#ccc;
-margin-left:30px;
-text-decoration:none;
+line-height:1.6;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:0 10%;
+padding:100px 10%;
+gap:60px;
+flex-wrap:wrap;
 }
 
 .hero-text{
-max-width:520px;
+max-width:500px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 margin-bottom:20px;
 }
 
 .hero p{
-color:#aaa;
-line-height:1.7;
+color:#94a3b8;
 margin-bottom:30px;
 }
 
 .btn{
-background:linear-gradient(135deg,#6b7cff,#9f7cff);
+background:#6366f1;
 padding:14px 28px;
-border-radius:30px;
-color:white;
+border-radius:8px;
 text-decoration:none;
+color:white;
+font-weight:600;
+display:inline-block;
+transition:0.3s;
 }
 
-/* DASHBOARD MOCKUP */
-
-.dashboard{
-width:500px;
-background:#0d111f;
-border-radius:20px;
-padding:25px;
-box-shadow:0 0 40px rgba(100,100,255,0.25);
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(99,102,241,0.4);
 }
 
-.chart{
-height:120px;
-background:linear-gradient(90deg,#6b7cff,#9f7cff);
-border-radius:10px;
-margin-bottom:20px;
-animation:grow 3s infinite alternate;
+.hero img{
+width:520px;
+border-radius:14px;
+box-shadow:0 30px 60px rgba(0,0,0,0.5);
 }
 
-@keyframes grow{
-from{transform:scaleX(.8)}
-to{transform:scaleX(1)}
+/* SECTION */
+
+.section{
+padding:100px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:50px;
+}
+
+/* HOW IT WORKS */
+
+.flow{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.step{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+width:220px;
+transition:0.3s;
+}
+
+.step:hover{
+transform:translateY(-6px);
 }
 
 /* FEATURES */
 
 .features{
-padding:120px 10%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.feature{
-background:#0c0f1c;
+.card{
+background:#1e293b;
 padding:30px;
-border-radius:15px;
-transition:.4s;
+border-radius:12px;
+width:260px;
+transition:0.3s;
 }
 
-.feature:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,.4);
+.card:hover{
+transform:translateY(-6px);
 }
 
 /* METRICS */
 
 .metrics{
-padding:120px 10%;
 display:flex;
-justify-content:space-around;
-text-align:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
 }
 
-.metric h2{
+.metric h3{
 font-size:40px;
-background:linear-gradient(90deg,#6b7cff,#9f7cff);
--webkit-background-clip:text;
-color:transparent;
+color:#6366f1;
 }
 
 /* CTA */
@@ -148,27 +145,20 @@ padding:120px 10%;
 }
 
 .cta h2{
-font-size:40px;
+font-size:36px;
 margin-bottom:20px;
 }
 
+.cta p{
+color:#94a3b8;
+margin-bottom:30px;
+}
+
 footer{
-padding:40px;
 text-align:center;
-color:#777;
-}
-
-/* SCROLL ANIMATION */
-
-.reveal{
-opacity:0;
-transform:translateY(60px);
-transition:1s;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
+padding:30px;
+color:#64748b;
+font-size:14px;
 }
 
 </style>
@@ -176,107 +166,142 @@ transform:translateY(0);
 
 <body>
 
-<nav>
-<div class="logo">GrowthAI</div>
-<div>
-<a href="#">Features</a>
-<a href="#">Pricing</a>
-<a href="#">Contact</a>
-</div>
-</nav>
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-text">
-<h1>AI Marketing That Drives Real Growth</h1>
+<h1>Grow Your Business With Data-Driven Marketing</h1>
 <p>
-Automate campaigns, capture leads, and scale your business with powerful marketing intelligence.
+NovaGrowth helps companies scale faster with automated marketing intelligence, real-time analytics, and powerful growth tools.
 </p>
-<a class="btn" href="#">Start Free Trial</a>
+
+<a href="#" class="btn">Start Free Trial</a>
+
 </div>
 
-<div class="dashboard">
-<div class="chart"></div>
-<div class="chart"></div>
-<div class="chart"></div>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200" alt="dashboard">
+
+</section>
+
+<!-- PRODUCT PREVIEW -->
+
+<section class="section">
+
+<h2>Powerful Marketing Dashboard</h2>
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400" style="width:80%;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,0.6);">
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section class="section">
+
+<h2>How NovaGrowth Works</h2>
+
+<div class="flow">
+
+<div class="step">
+<h3>Capture Leads</h3>
+<p>Collect high-quality leads from multiple marketing channels.</p>
+</div>
+
+<div class="step">
+<h3>AI Analyze</h3>
+<p>Our engine analyzes customer behavior and campaign performance.</p>
+</div>
+
+<div class="step">
+<h3>Launch Campaign</h3>
+<p>Automatically launch optimized marketing campaigns.</p>
+</div>
+
+<div class="step">
+<h3>Track Growth</h3>
+<p>Monitor revenue growth and marketing ROI in real time.</p>
+</div>
+
 </div>
 
 </section>
 
-<section class="features">
+<!-- FEATURES -->
 
-<div class="feature reveal">
-<h3>AI Campaign Builder</h3>
-<p>Create high converting campaigns automatically.</p>
+<section class="section">
+
+<h2>Platform Features</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Campaign Automation</h3>
+<p>Create and launch high-converting campaigns automatically.</p>
 </div>
 
-<div class="feature reveal">
-<h3>Smart Lead Tracking</h3>
-<p>Track behavior and predict buying intent.</p>
+<div class="card">
+<h3>Real-Time Analytics</h3>
+<p>Track marketing performance with live dashboards.</p>
 </div>
 
-<div class="feature reveal">
-<h3>Conversion Analytics</h3>
-<p>Understand your growth with real-time data.</p>
+<div class="card">
+<h3>Lead Intelligence</h3>
+<p>Understand your customers with advanced behavior insights.</p>
+</div>
+
+<div class="card">
+<h3>Conversion Optimization</h3>
+<p>Improve conversion rates with smart AI recommendations.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- METRICS -->
+
+<section class="section">
+
+<h2>Trusted by Growth Teams</h2>
+
+<div class="metrics">
+
+<div class="metric">
+<h3>+230%</h3>
+<p>Average Revenue Growth</p>
+</div>
+
+<div class="metric">
+<h3>3.2M</h3>
+<p>Leads Generated</p>
+</div>
+
+<div class="metric">
+<h3>98%</h3>
+<p>Customer Satisfaction</p>
+</div>
+
 </div>
 
 </section>
 
-<section class="metrics">
-
-<div class="metric reveal">
-<h2>+320%</h2>
-<p>Lead Growth</p>
-</div>
-
-<div class="metric reveal">
-<h2>+180%</h2>
-<p>Conversion</p>
-</div>
-
-<div class="metric reveal">
-<h2>12k+</h2>
-<p>Customers</p>
-</div>
-
-</section>
+<!-- CTA -->
 
 <section class="cta">
 
-<h2>Start Growing Today</h2>
-<p style="color:#aaa;margin-bottom:30px;">Experience marketing automation powered by AI.</p>
+<h2>Ready to Accelerate Your Growth?</h2>
 
-<a class="btn" href="#">Get Started</a>
+<p>Join thousands of companies scaling with NovaGrowth.</p>
+
+<a href="#" class="btn">Get Started Today</a>
 
 </section>
 
 <footer>
 
-Project Showcase – Built by Rius
+© 2026 NovaGrowth Marketing Platform — Designed by Rius Dev
 
 </footer>
-
-<script>
-
-function reveal(){
-var reveals=document.querySelectorAll(".reveal");
-
-for(var i=0;i<reveals.length;i++){
-
-var windowHeight=window.innerHeight;
-var elementTop=reveals[i].getBoundingClientRect().top;
-var elementVisible=100;
-
-if(elementTop<windowHeight-elementVisible){
-reveals[i].classList.add("active");
-}
-
-}
-}
-
-window.addEventListener("scroll",reveal);
-
-</script>
 
 </body>
 </html>
