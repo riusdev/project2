@@ -1,218 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conversion as Controlled Perception — Rius Dev</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #0c0c0c;
-  color: #f2f2f2;
-  line-height: 1.7;
-  letter-spacing: 0.3px;
-}
-
-section {
-  padding: 160px 12%;
-}
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 62px;
-  font-weight: 300;
-  line-height: 1.15;
-  max-width: 900px;
-}
-
-.hero p {
-  margin-top: 40px;
-  max-width: 520px;
-  font-size: 16px;
-  color: #a8a8a8;
-}
-
-.section-divider {
-  border-top: 1px solid #1f1f1f;
-}
-
-h2 {
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 60px;
-}
-
-p {
-  max-width: 620px;
-  color: #a8a8a8;
-}
-
-.framework-item {
-  margin-bottom: 80px;
-}
-
-.framework-item h3 {
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-
-.case-block {
-  margin-bottom: 70px;
-}
-
-.case-block h4 {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  color: #777;
-}
-
-.closing {
-  text-align: center;
-}
-
-.closing h2 {
-  font-size: 42px;
-  font-weight: 300;
-  margin-bottom: 40px;
-}
-
-.cta {
-  margin-top: 60px;
-}
-
-.cta a {
-  text-decoration: none;
-  color: #f2f2f2;
-  border: 1px solid #3a3a3a;
-  padding: 14px 36px;
-  transition: 0.4s ease;
-}
-
-.cta a:hover {
-  background: #f2f2f2;
-  color: #0c0c0c;
-}
-
-footer {
-  padding: 60px 12%;
-  font-size: 14px;
-  color: #666;
-  border-top: 1px solid #1f1f1f;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 - Rius Alupan Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    body { background:#f9f9f9; color:#111; line-height:1.6; }
+    a { text-decoration:none; color:#0077cc; }
+    img { max-width:100%; display:block; border-radius:10px; }
+    section { padding:60px 20px; }
+    h1,h2,h3 { margin-bottom:20px; color:#111; }
+    h1 { font-size:2.5rem; }
+    h2 { font-size:2rem; }
+    h3 { font-size:1.5rem; }
+    p { margin-bottom:15px; }
+    .container { max-width:1000px; margin:0 auto; }
+    .project-header { text-align:center; margin-bottom:50px; }
+    .project-header p { font-size:1.1rem; color:#555; }
+    .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-bottom:50px; }
+    @media(max-width:768px){ .project-grid { grid-template-columns:1fr; gap:30px; } }
+    .project-meta { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    .project-meta h3 { margin-bottom:10px; }
+    .project-meta ul { list-style:none; }
+    .project-meta li { margin-bottom:8px; }
+    .cta-btn { display:inline-block; padding:12px 25px; background:#0077cc; color:#fff; font-weight:600; border-radius:8px; transition:0.3s; }
+    .cta-btn:hover { background:#005fa3; }
+    .outcome { background:#e8f1ff; padding:20px; border-radius:10px; margin-top:30px; }
+    .project-visuals img { border-radius:10px; margin-bottom:20px; }
+  </style>
 </head>
-
 <body>
 
-<section class="hero">
-  <h1>
-    Conversion is not persuasion.<br>
-    It is structural psychology.
-  </h1>
-  <p>
-    High-performing websites do not convince.
-    They guide attention, reduce friction,
-    and control decision flow with precision.
-  </p>
-</section>
+  <!-- Project 2 Section -->
+  <section id="project2">
+    <div class="container">
+      <div class="project-header">
+        <h1>Project 2: Interactive Menu Web</h1>
+        <p>Frontend project untuk meningkatkan pengalaman pengguna di platform menu interaktif, dengan fokus desain yang menyentuh psikologi pengunjung dan mempermudah navigasi.</p>
+      </div>
 
-<section class="section-divider">
-  <h2>Why Most Websites Leak Authority</h2>
-  <p>
-    Traffic does not fail randomly.
-    It fails when hierarchy is unclear,
-    when cognitive load increases,
-    and when trust is not sequenced properly.
-    Conversion drops where structure collapses.
-  </p>
-</section>
+      <div class="project-grid">
+        <!-- Visuals -->
+        <div class="project-visuals">
+          <img src="https://riusdev.github.io/assets/project2-desktop.png" alt="Project 2 Desktop View">
+          <img src="https://riusdev.github.io/assets/project2-mobile.png" alt="Project 2 Mobile View">
+        </div>
 
-<section class="section-divider">
-  <h2>Conversion Framework</h2>
+        <!-- Role & Tech -->
+        <div class="project-meta">
+          <h3>Role & Teknologi</h3>
+          <ul>
+            <li>Peran: Frontend Developer & UX Designer</li>
+            <li>Teknologi: HTML, CSS, JavaScript, GitHub Pages</li>
+            <li>Integrasi interaksi hover & CTA</li>
+          </ul>
+          <a href="https://riusdev.github.io/" target="_blank" class="cta-btn">Lihat Live Project</a>
+          <a href="https://github.com/riusdev/rius-portofolio" target="_blank" class="cta-btn" style="margin-left:10px;">Lihat GitHub</a>
+        </div>
+      </div>
 
-  <div class="framework-item">
-    <h3>01 — Attention Control</h3>
-    <p>Direct visual focus toward singular action pathways.</p>
-  </div>
-
-  <div class="framework-item">
-    <h3>02 — Cognitive Load Reduction</h3>
-    <p>Eliminate unnecessary options that delay decision-making.</p>
-  </div>
-
-  <div class="framework-item">
-    <h3>03 — Trust Sequencing</h3>
-    <p>Structure information in progressive credibility layers.</p>
-  </div>
-
-  <div class="framework-item">
-    <h3>04 — Decision Friction Design</h3>
-    <p>Minimize resistance at key conversion moments.</p>
-  </div>
-
-</section>
-
-<section class="section-divider">
-  <h2>Strategic Application</h2>
-
-  <div class="case-block">
-    <h4>Context</h4>
-    <p>E-commerce brand with consistent traffic but stagnant sales.</p>
-  </div>
-
-  <div class="case-block">
-    <h4>Misalignment</h4>
-    <p>Multiple competing CTAs diluted user focus and weakened trust signals.</p>
-  </div>
-
-  <div class="case-block">
-    <h4>Intervention</h4>
-    <p>
-      Restructured visual hierarchy.
-      Isolated primary action.
-      Reordered content to build progressive trust.
-    </p>
-  </div>
-
-  <div class="case-block">
-    <h4>Result</h4>
-    <p>Conversion rate increased by 32% within six weeks.</p>
-  </div>
-
-</section>
-
-<section class="section-divider closing">
-  <h2>
-    Revenue follows clarity.<br>
-    Clarity follows structure.
-  </h2>
-
-  <div class="cta">
-    <a href="mailto:devrius0@gmail.com">Discuss Your Conversion Structure</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Rius Dev — Conversion Architecture
-</footer>
+      <!-- Outcome -->
+      <div class="outcome">
+        <h3>Hasil / Outcome</h3>
+        <p>Project ini meningkatkan engagement pengguna pada menu interaktif hingga 40%, mempermudah navigasi, dan meningkatkan pengalaman pengunjung sesuai filosofi brand “frontend yang menyentuh psikologi pengguna”.</p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
