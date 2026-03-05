@@ -56,8 +56,41 @@ transform:translateY(-3px);
 box-shadow:0 10px 30px rgba(106,92,255,0.4);
 }
 
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0a0a0a;
+padding:20px 0;
+border-bottom:1px solid #222;
+z-index:1000;
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:white;
+}
+
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:#bdbdbd;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
 align-items:center;
 text-align:center;
@@ -65,11 +98,11 @@ background:radial-gradient(circle at top,#1a1a1a,#000);
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 }
 
 .hero p{
-max-width:600px;
+max-width:650px;
 margin:20px auto;
 }
 
@@ -88,8 +121,8 @@ transition:.3s;
 }
 
 .service-card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 25px 60px rgba(0,0,0,0.6);
 }
 
 .metrics{
@@ -101,8 +134,27 @@ flex-wrap:wrap;
 }
 
 .metric h2{
-font-size:40px;
+font-size:42px;
 color:#8f85ff;
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.project-card{
+background:#111;
+padding:30px;
+border-radius:12px;
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
 }
 
 .process{
@@ -145,6 +197,18 @@ border-top:1px solid #222;
 
 <body>
 
+<nav>
+<div class="container nav-inner">
+<div class="logo">NovaGrowth</div>
+<div class="nav-links">
+<a href="#">Services</a>
+<a href="#">Results</a>
+<a href="#">Process</a>
+<a href="#">Contact</a>
+</div>
+</div>
+</nav>
+
 <section class="hero">
 <div class="container">
 <h1>We Help Businesses Grow Online</h1>
@@ -156,38 +220,36 @@ and high-converting digital experiences that drive real business growth.
 </div>
 </section>
 
-
 <section>
 <div class="container">
 <h2>Services</h2>
-<p>Our team helps brands grow through strategy, design, and digital marketing.</p>
+<p>Strategic digital services designed to elevate modern brands.</p>
 
 <div class="services">
 
 <div class="service-card">
 <h3>Website Design</h3>
-<p>Modern, responsive websites designed to create trust and elevate your brand.</p>
+<p>Modern websites crafted to build trust and elevate your digital presence.</p>
 </div>
 
 <div class="service-card">
 <h3>SEO Optimization</h3>
-<p>We help your business rank higher in search engines and attract more customers.</p>
+<p>Rank higher in search results and attract the right customers.</p>
 </div>
 
 <div class="service-card">
 <h3>Conversion Strategy</h3>
-<p>Every page we design focuses on turning visitors into real clients.</p>
+<p>We design every page to transform visitors into real clients.</p>
 </div>
 
 <div class="service-card">
 <h3>Brand Identity</h3>
-<p>We help businesses build a powerful and memorable digital presence.</p>
+<p>Build a powerful and memorable brand online.</p>
 </div>
 
 </div>
 </div>
 </section>
-
 
 <section>
 <div class="container">
@@ -215,54 +277,81 @@ and high-converting digital experiences that drive real business growth.
 </div>
 </section>
 
+<section>
+<div class="container">
+
+<h2>Featured Projects</h2>
+<p>Some of the digital experiences we created for modern businesses.</p>
+
+<div class="portfolio">
+
+<div class="project-card">
+<h3>Ecommerce Brand</h3>
+<p>High conversion online store designed to increase product sales.</p>
+</div>
+
+<div class="project-card">
+<h3>Restaurant Website</h3>
+<p>Elegant website helping a restaurant build a stronger digital identity.</p>
+</div>
+
+<div class="project-card">
+<h3>Startup Landing Page</h3>
+<p>Conversion focused landing page designed to attract investors.</p>
+</div>
+
+</div>
+
+</div>
+</section>
 
 <section>
 <div class="container">
+
 <h2>Our Process</h2>
 
 <div class="process">
 
 <div class="process-step">
 <h3>1. Discovery</h3>
-<p>We understand your business, goals, and audience.</p>
+<p>We understand your brand, audience, and business goals.</p>
 </div>
 
 <div class="process-step">
 <h3>2. Strategy</h3>
-<p>We create a digital strategy focused on growth.</p>
+<p>We create a digital growth strategy tailored to your business.</p>
 </div>
 
 <div class="process-step">
 <h3>3. Design</h3>
-<p>We craft modern, elegant designs that build trust.</p>
+<p>Our team crafts modern and emotionally engaging user experiences.</p>
 </div>
 
 <div class="process-step">
 <h3>4. Launch</h3>
-<p>Your new digital experience goes live and drives results.</p>
+<p>Your new digital experience goes live and starts driving growth.</p>
 </div>
 
 </div>
 
 </div>
 </section>
-
 
 <section>
 <div class="container">
 
 <div class="testimonial">
 <p>
-“NovaGrowth transformed our online presence.
-The new website not only looks premium but also helped us attract more clients.”
+“NovaGrowth completely transformed our online presence.
+Our new website feels premium and helped us attract higher quality clients.”
 </p>
 
 <h4>— Startup Founder</h4>
+
 </div>
 
 </div>
 </section>
-
 
 <section class="cta">
 <div class="container">
@@ -271,7 +360,6 @@ The new website not only looks premium but also helped us attract more clients.�
 <a href="#" class="btn">Start a Project</a>
 </div>
 </section>
-
 
 <footer>
 <p>
