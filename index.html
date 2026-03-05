@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovaGrowth — Digital Growth Platform</title>
+<title>NovaGrowth — Marketing Intelligence Platform</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -29,8 +29,8 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:100px 10%;
-gap:60px;
 flex-wrap:wrap;
+gap:60px;
 }
 
 .hero-text{
@@ -55,18 +55,18 @@ text-decoration:none;
 color:white;
 font-weight:600;
 display:inline-block;
-transition:0.3s;
+transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(99,102,241,0.4);
+box-shadow:0 10px 30px rgba(99,102,241,.4);
 }
 
 .hero img{
 width:520px;
 border-radius:14px;
-box-shadow:0 30px 60px rgba(0,0,0,0.5);
+box-shadow:0 30px 60px rgba(0,0,0,.6);
 }
 
 /* SECTION */
@@ -78,36 +78,99 @@ text-align:center;
 
 .section h2{
 font-size:34px;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
-/* HOW IT WORKS */
+/* DASHBOARD UI */
 
-.flow{
+.dashboard{
+background:#1e293b;
+border-radius:14px;
+padding:30px;
+max-width:900px;
+margin:auto;
+box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+
+.stats{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.stat{
+flex:1;
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+}
+
+.chart{
+height:120px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);
+border-radius:8px;
+margin-top:10px;
+}
+
+/* CAMPAIGN LIST */
+
+.table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+}
+
+.table th,
+.table td{
+padding:12px;
+border-bottom:1px solid #334155;
+text-align:left;
+color:#cbd5f5;
+}
+
+/* DEVICE PREVIEW */
+
+.devices{
 display:flex;
 justify-content:center;
 gap:40px;
 flex-wrap:wrap;
 }
 
-.step{
-background:#1e293b;
-padding:30px;
+.devices img{
+width:260px;
 border-radius:12px;
-width:220px;
-transition:0.3s;
+box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
 
-.step:hover{
-transform:translateY(-6px);
+/* FLOW */
+
+.flow{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.step{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+width:200px;
+}
+
+.arrow{
+font-size:30px;
+align-self:center;
 }
 
 /* FEATURES */
 
 .features{
 display:flex;
-gap:30px;
 flex-wrap:wrap;
+gap:30px;
 justify-content:center;
 }
 
@@ -115,12 +178,7 @@ justify-content:center;
 background:#1e293b;
 padding:30px;
 border-radius:12px;
-width:260px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
+width:250px;
 }
 
 /* METRICS */
@@ -144,21 +202,15 @@ text-align:center;
 padding:120px 10%;
 }
 
-.cta h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
 .cta p{
 color:#94a3b8;
-margin-bottom:30px;
+margin:20px 0 30px;
 }
 
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 color:#64748b;
-font-size:14px;
 }
 
 </style>
@@ -171,30 +223,101 @@ font-size:14px;
 <section class="hero">
 
 <div class="hero-text">
-<h1>Grow Your Business With Data-Driven Marketing</h1>
+<h1>Marketing Intelligence That Drives Real Growth</h1>
+
 <p>
-NovaGrowth helps companies scale faster with automated marketing intelligence, real-time analytics, and powerful growth tools.
+NovaGrowth helps companies automate marketing campaigns,
+track customer behavior, and scale revenue using powerful data insights.
 </p>
 
-<a href="#" class="btn">Start Free Trial</a>
+<a class="btn" href="#">Start Free Trial</a>
 
 </div>
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200" alt="dashboard">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200">
 
 </section>
 
-<!-- PRODUCT PREVIEW -->
+<!-- PRODUCT DASHBOARD -->
 
 <section class="section">
 
-<h2>Powerful Marketing Dashboard</h2>
+<h2>Real-Time Marketing Dashboard</h2>
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400" style="width:80%;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,0.6);">
+<div class="dashboard">
+
+<div class="stats">
+
+<div class="stat">
+<h4>Conversion Rate</h4>
+<div class="chart"></div>
+</div>
+
+<div class="stat">
+<h4>Revenue Growth</h4>
+<div class="chart"></div>
+</div>
+
+<div class="stat">
+<h4>Campaign Performance</h4>
+<div class="chart"></div>
+</div>
+
+</div>
+
+<table class="table">
+
+<tr>
+<th>Campaign</th>
+<th>Status</th>
+<th>Leads</th>
+<th>Conversion</th>
+</tr>
+
+<tr>
+<td>Spring Launch</td>
+<td>Active</td>
+<td>1,240</td>
+<td>8.3%</td>
+</tr>
+
+<tr>
+<td>Email Funnel</td>
+<td>Running</td>
+<td>980</td>
+<td>6.7%</td>
+</tr>
+
+<tr>
+<td>Ad Campaign</td>
+<td>Paused</td>
+<td>2,340</td>
+<td>9.1%</td>
+</tr>
+
+</table>
+
+</div>
 
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- DEVICE PREVIEW -->
+
+<section class="section">
+
+<h2>Available Across All Devices</h2>
+
+<div class="devices">
+
+<img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=900">
+<img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=900">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=900">
+
+</div>
+
+</section>
+
+<!-- PRODUCT FLOW -->
 
 <section class="section">
 
@@ -204,22 +327,28 @@ NovaGrowth helps companies scale faster with automated marketing intelligence, r
 
 <div class="step">
 <h3>Capture Leads</h3>
-<p>Collect high-quality leads from multiple marketing channels.</p>
+<p>Collect high quality leads from multiple marketing channels.</p>
 </div>
+
+<div class="arrow">→</div>
 
 <div class="step">
 <h3>AI Analyze</h3>
-<p>Our engine analyzes customer behavior and campaign performance.</p>
+<p>Our AI analyzes behavior and predicts buying intent.</p>
 </div>
+
+<div class="arrow">→</div>
 
 <div class="step">
 <h3>Launch Campaign</h3>
 <p>Automatically launch optimized marketing campaigns.</p>
 </div>
 
+<div class="arrow">→</div>
+
 <div class="step">
 <h3>Track Growth</h3>
-<p>Monitor revenue growth and marketing ROI in real time.</p>
+<p>Monitor revenue growth and conversion metrics in real time.</p>
 </div>
 
 </div>
@@ -236,22 +365,22 @@ NovaGrowth helps companies scale faster with automated marketing intelligence, r
 
 <div class="card">
 <h3>Campaign Automation</h3>
-<p>Create and launch high-converting campaigns automatically.</p>
+<p>Create and launch high converting campaigns automatically.</p>
 </div>
 
 <div class="card">
-<h3>Real-Time Analytics</h3>
-<p>Track marketing performance with live dashboards.</p>
+<h3>Customer Insights</h3>
+<p>Understand customer behavior with advanced analytics.</p>
 </div>
 
 <div class="card">
 <h3>Lead Intelligence</h3>
-<p>Understand your customers with advanced behavior insights.</p>
+<p>Identify high value leads and improve targeting.</p>
 </div>
 
 <div class="card">
 <h3>Conversion Optimization</h3>
-<p>Improve conversion rates with smart AI recommendations.</p>
+<p>Increase marketing ROI with data driven optimization.</p>
 </div>
 
 </div>
@@ -268,7 +397,7 @@ NovaGrowth helps companies scale faster with automated marketing intelligence, r
 
 <div class="metric">
 <h3>+230%</h3>
-<p>Average Revenue Growth</p>
+<p>Revenue Growth</p>
 </div>
 
 <div class="metric">
@@ -289,19 +418,19 @@ NovaGrowth helps companies scale faster with automated marketing intelligence, r
 
 <section class="cta">
 
-<h2>Ready to Accelerate Your Growth?</h2>
+<h2>Ready to Scale Your Marketing?</h2>
 
-<p>Join thousands of companies scaling with NovaGrowth.</p>
+<p>Start using NovaGrowth today and unlock real business growth.</p>
 
-<a href="#" class="btn">Get Started Today</a>
+<a class="btn" href="#">Start Free Trial</a>
 
 </section>
 
 <footer>
 
-© 2026 NovaGrowth Marketing Platform — Designed by Rius Dev
+Project Showcase — Designed by Rius Dev
 
 </footer>
 
 </body>
-</html>
+  </html>
