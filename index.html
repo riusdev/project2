@@ -1,103 +1,64 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovaGrowth Digital Agency</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+<title>GrowthAI – Marketing Automation</title>
 
-html{scroll-behavior:smooth;}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
 body{
-background:#0a0a0a;
+background:#05070f;
 color:white;
-line-height:1.6;
+overflow-x:hidden;
 }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-section{
-padding:100px 0;
-}
-
-p{color:#bdbdbd;}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-background:linear-gradient(135deg,#6a5cff,#8f85ff);
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(106,92,255,0.4);
-}
+/* NAV */
 
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:#0a0a0a;
-padding:20px 0;
-border-bottom:1px solid #222;
-z-index:1000;
-}
-
-.nav-inner{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:25px 10%;
+position:fixed;
+width:100%;
+top:0;
+backdrop-filter:blur(10px);
 }
 
 .logo{
-font-weight:700;
+font-weight:600;
 font-size:20px;
 }
 
-.nav-links a{
-margin-left:20px;
+nav a{
+color:#ccc;
+margin-left:30px;
 text-decoration:none;
-color:#bdbdbd;
-position:relative;
 }
 
-.nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-4px;
-width:0%;
-height:2px;
-background:#8f85ff;
-transition:0.3s;
-}
-
-.nav-links a:hover::after{
-width:100%;
-}
+/* HERO */
 
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
-background:radial-gradient(circle at top,#1a1a1a,#000);
-padding-top:120px;
+justify-content:space-between;
+padding:0 10%;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+.hero-text{
+max-width:520px;
 }
 
 .hero h1{
@@ -105,211 +66,217 @@ font-size:50px;
 margin-bottom:20px;
 }
 
-.hero img{
-width:100%;
-border-radius:10px;
-box-shadow:0 30px 80px rgba(0,0,0,0.6);
+.hero p{
+color:#aaa;
+line-height:1.7;
+margin-bottom:30px;
 }
 
-.services{
+.btn{
+background:linear-gradient(135deg,#6b7cff,#9f7cff);
+padding:14px 28px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+}
+
+/* DASHBOARD MOCKUP */
+
+.dashboard{
+width:500px;
+background:#0d111f;
+border-radius:20px;
+padding:25px;
+box-shadow:0 0 40px rgba(100,100,255,0.25);
+}
+
+.chart{
+height:120px;
+background:linear-gradient(90deg,#6b7cff,#9f7cff);
+border-radius:10px;
+margin-bottom:20px;
+animation:grow 3s infinite alternate;
+}
+
+@keyframes grow{
+from{transform:scaleX(.8)}
+to{transform:scaleX(1)}
+}
+
+/* FEATURES */
+
+.features{
+padding:120px 10%;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
+gap:40px;
 }
 
-.service-card{
-background:#111;
+.feature{
+background:#0c0f1c;
 padding:30px;
-border-radius:12px;
-transition:.3s;
+border-radius:15px;
+transition:.4s;
 }
 
-.service-card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 25px 60px rgba(0,0,0,0.6);
+.feature:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 
-.service-icon{
-font-size:32px;
-margin-bottom:10px;
-}
+/* METRICS */
 
 .metrics{
+padding:120px 10%;
 display:flex;
 justify-content:space-around;
 text-align:center;
-margin-top:40px;
-flex-wrap:wrap;
 }
 
 .metric h2{
-font-size:42px;
-color:#8f85ff;
+font-size:40px;
+background:linear-gradient(90deg,#6b7cff,#9f7cff);
+-webkit-background-clip:text;
+color:transparent;
 }
 
-.portfolio{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.project-card{
-background:#111;
-border-radius:12px;
-overflow:hidden;
-transition:.3s;
-}
-
-.project-card img{
-width:100%;
-display:block;
-}
-
-.project-card div{
-padding:20px;
-}
-
-.project-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,0.6);
-}
-
-.process{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.process-step{
-background:#111;
-padding:25px;
-border-radius:10px;
-}
-
-.testimonial{
-background:#111;
-padding:40px;
-border-radius:12px;
-max-width:700px;
-margin:auto;
-text-align:center;
-}
+/* CTA */
 
 .cta{
 text-align:center;
-background:linear-gradient(135deg,#1a1a1a,#000);
+padding:120px 10%;
+}
+
+.cta h2{
+font-size:40px;
+margin-bottom:20px;
 }
 
 footer{
+padding:40px;
 text-align:center;
-padding:40px 0;
 color:#777;
-font-size:14px;
-border-top:1px solid #222;
 }
 
-</style></head><body><nav>
-<div class="container nav-inner">
-<div class="logo">NovaGrowth</div>
-<div class="nav-links">
-<a href="#">Services</a>
-<a href="#">Results</a>
-<a href="#">Process</a>
+/* SCROLL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">GrowthAI</div>
+<div>
+<a href="#">Features</a>
+<a href="#">Pricing</a>
 <a href="#">Contact</a>
 </div>
-</div>
-</nav><section class="hero">
-<div class="container hero-grid"><div>
-<h1>We Help Businesses Grow Online</h1>
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>AI Marketing That Drives Real Growth</h1>
 <p>
-NovaGrowth is a digital marketing agency focused on building powerful websites and high-converting digital experiences.
+Automate campaigns, capture leads, and scale your business with powerful marketing intelligence.
 </p>
-<br>
-<a href="#" class="btn">Start Your Project</a>
-</div><div>
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-</div></div>
-</section><section>
-<div class="container"><h2>Services</h2><div class="services"><div class="service-card">
-<div class="service-icon">💻</div>
-<h3>Website Design</h3>
-<p>Modern responsive websites designed to elevate your brand.</p>
-</div><div class="service-card">
-<div class="service-icon">📈</div>
-<h3>SEO Optimization</h3>
-<p>Improve search ranking and attract more customers.</p>
-</div><div class="service-card">
-<div class="service-icon">🎯</div>
-<h3>Conversion Strategy</h3>
-<p>Turn visitors into paying clients through smart UX.</p>
-</div><div class="service-card">
-<div class="service-icon">🎨</div>
-<h3>Brand Identity</h3>
-<p>Create a powerful and memorable brand online.</p>
-</div></div></div>
-</section><section>
-<div class="container"><h2>Results That Matter</h2><div class="metrics"><div class="metric">
-<h2>150+</h2>
-<p>Projects Completed</p>
-</div><div class="metric">
-<h2>90%</h2>
-<p>Client Satisfaction</p>
-</div><div class="metric">
-<h2>3x</h2>
-<p>Average Growth</p>
-</div></div></div>
-</section><section>
-<div class="container"><h2>Featured Projects</h2><div class="portfolio"><div class="project-card">
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
-<div>
-<h3>Ecommerce Brand</h3>
-<p>High conversion online store design.</p>
+<a class="btn" href="#">Start Free Trial</a>
 </div>
-</div><div class="project-card">
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
-<div>
-<h3>Restaurant Website</h3>
-<p>Elegant digital presence for restaurant brand.</p>
+
+<div class="dashboard">
+<div class="chart"></div>
+<div class="chart"></div>
+<div class="chart"></div>
 </div>
-</div><div class="project-card">
-<img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
-<div>
-<h3>Startup Landing Page</h3>
-<p>Conversion focused landing page.</p>
+
+</section>
+
+<section class="features">
+
+<div class="feature reveal">
+<h3>AI Campaign Builder</h3>
+<p>Create high converting campaigns automatically.</p>
 </div>
-</div></div></div>
-</section><section>
-<div class="container"><h2>Our Process</h2><div class="process"><div class="process-step">
-<h3>1 Discovery</h3>
-<p>Understanding your business and goals.</p>
-</div><div class="process-step">
-<h3>2 Strategy</h3>
-<p>Planning digital growth strategy.</p>
-</div><div class="process-step">
-<h3>3 Design</h3>
-<p>Crafting modern engaging UI/UX.</p>
-</div><div class="process-step">
-<h3>4 Launch</h3>
-<p>Launching your new digital experience.</p>
-</div></div></div>
-</section><section>
-<div class="container"><div class="testimonial"><p>
-“NovaGrowth transformed our online presence and helped us attract more high quality clients.”
-</p><h4>— Startup Founder</h4></div></div>
-</section><section class="cta">
-<div class="container">
-<h2>Ready to Grow Your Business?</h2>
-<p>Let’s build a powerful digital experience for your brand.</p>
-<br>
-<a href="#" class="btn">Start a Project</a>
+
+<div class="feature reveal">
+<h3>Smart Lead Tracking</h3>
+<p>Track behavior and predict buying intent.</p>
 </div>
-</section><footer>
-<p>
-Crafted with attention to emotion, experience, and human psychology.<br>
-— Rius Dev
-</p>
-</footer></body>
+
+<div class="feature reveal">
+<h3>Conversion Analytics</h3>
+<p>Understand your growth with real-time data.</p>
+</div>
+
+</section>
+
+<section class="metrics">
+
+<div class="metric reveal">
+<h2>+320%</h2>
+<p>Lead Growth</p>
+</div>
+
+<div class="metric reveal">
+<h2>+180%</h2>
+<p>Conversion</p>
+</div>
+
+<div class="metric reveal">
+<h2>12k+</h2>
+<p>Customers</p>
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Start Growing Today</h2>
+<p style="color:#aaa;margin-bottom:30px;">Experience marketing automation powered by AI.</p>
+
+<a class="btn" href="#">Get Started</a>
+
+</section>
+
+<footer>
+
+Project Showcase – Built by Rius
+
+</footer>
+
+<script>
+
+function reveal(){
+var reveals=document.querySelectorAll(".reveal");
+
+for(var i=0;i<reveals.length;i++){
+
+var windowHeight=window.innerHeight;
+var elementTop=reveals[i].getBoundingClientRect().top;
+var elementVisible=100;
+
+if(elementTop<windowHeight-elementVisible){
+reveals[i].classList.add("active");
+}
+
+}
+}
+
+window.addEventListener("scroll",reveal);
+
+</script>
+
+</body>
 </html>
