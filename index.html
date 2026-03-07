@@ -1,436 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovaGrowth — Marketing Intelligence Platform</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Restaurant Website Case Study | RiusDev</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
 body{
-background:#0f172a;
-color:white;
+font-family:Arial, sans-serif;
+margin:0;
+background:#fafafa;
+color:#333;
 line-height:1.6;
 }
 
 /* HERO */
 
 .hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:100px 10%;
-flex-wrap:wrap;
-gap:60px;
-}
 
-.hero-text{
-max-width:500px;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+padding:180px 20px;
+text-align:center;
+
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:20px;
+font-size:46px;
+margin-bottom:10px;
 }
 
 .hero p{
-color:#94a3b8;
-margin-bottom:30px;
+max-width:720px;
+margin:auto;
+opacity:0.9;
 }
 
-.btn{
-background:#6366f1;
-padding:14px 28px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:600;
+.hero a{
+
 display:inline-block;
-transition:.3s;
+margin-top:30px;
+
+background:#ff6b35;
+color:white;
+
+padding:14px 30px;
+border-radius:6px;
+
+text-decoration:none;
+font-weight:bold;
+
+transition:0.3s;
+
 }
 
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(99,102,241,.4);
-}
+/* CONTAINER */
 
-.hero img{
-width:520px;
-border-radius:14px;
-box-shadow:0 30px 60px rgba(0,0,0,.6);
-}
+.container{
 
-/* SECTION */
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+
+}
 
 .section{
-padding:100px 10%;
-text-align:center;
+margin-top:80px;
 }
 
-.section h2{
-font-size:34px;
-margin-bottom:60px;
-}
+/* GRID */
 
-/* DASHBOARD UI */
+.grid{
 
-.dashboard{
-background:#1e293b;
-border-radius:14px;
-padding:30px;
-max-width:900px;
-margin:auto;
-box-shadow:0 20px 50px rgba(0,0,0,.6);
-}
-
-.stats{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:30px;
-}
-
-.stat{
-flex:1;
-background:#0f172a;
-padding:20px;
-border-radius:10px;
-}
-
-.chart{
-height:120px;
-background:linear-gradient(90deg,#6366f1,#8b5cf6);
-border-radius:8px;
-margin-top:10px;
-}
-
-/* CAMPAIGN LIST */
-
-.table{
-width:100%;
-border-collapse:collapse;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 margin-top:30px;
-}
 
-.table th,
-.table td{
-padding:12px;
-border-bottom:1px solid #334155;
-text-align:left;
-color:#cbd5f5;
-}
-
-/* DEVICE PREVIEW */
-
-.devices{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-}
-
-.devices img{
-width:260px;
-border-radius:12px;
-box-shadow:0 20px 40px rgba(0,0,0,.6);
-}
-
-/* FLOW */
-
-.flow{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.step{
-background:#1e293b;
-padding:25px;
-border-radius:12px;
-width:200px;
-}
-
-.arrow{
-font-size:30px;
-align-self:center;
-}
-
-/* FEATURES */
-
-.features{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
 }
 
 .card{
-background:#1e293b;
+
+background:white;
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+
+}
+
+/* IMAGE */
+
+img{
+
+width:100%;
+border-radius:10px;
+margin-top:20px;
+
+}
+
+/* CASE */
+
+.case{
+
+background:white;
 padding:30px;
-border-radius:12px;
-width:250px;
+
+border-radius:10px;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+
 }
 
-/* METRICS */
+/* RESULT */
 
-.metrics{
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
+.result{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:30px;
+
 }
 
-.metric h3{
-font-size:40px;
-color:#6366f1;
+.result-box{
+
+background:white;
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.result-box:hover{
+transform:translateY(-5px);
+}
+
+/* TESTIMONIAL */
+
+.quote{
+
+background:#111;
+color:white;
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.quote p{
+
+font-size:20px;
+max-width:700px;
+margin:auto;
+
 }
 
 /* CTA */
 
 .cta{
+
+background:#ff6b35;
+color:white;
+
 text-align:center;
-padding:120px 10%;
+
+padding:90px 20px;
+
 }
 
-.cta p{
-color:#94a3b8;
-margin:20px 0 30px;
+.cta a{
+
+display:inline-block;
+margin-top:25px;
+
+background:white;
+color:#ff6b35;
+
+padding:14px 30px;
+
+border-radius:6px;
+
+text-decoration:none;
+font-weight:bold;
+
+transition:0.3s;
+
 }
 
-footer{
-text-align:center;
-padding:40px;
-color:#64748b;
+/* BUTTON HOVER */
+
+.hero a:hover,
+.cta a:hover{
+
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:32px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
+
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-text">
-<h1>Marketing Intelligence That Drives Real Growth</h1>
+<h1>Restaurant Website Redesign</h1>
 
 <p>
-NovaGrowth helps companies automate marketing campaigns,
-track customer behavior, and scale revenue using powerful data insights.
+Case study redesign website untuk bisnis restaurant modern
+agar terlihat lebih profesional dan memudahkan pelanggan
+menemukan menu, lokasi, dan reservasi.
 </p>
 
-<a class="btn" href="#">Start Free Trial</a>
-
-</div>
-
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200">
+<a href="https://wa.me/6281234567890?text=Hi%20RiusDev,%20saya%20tertarik%20membuat%20website%20restaurant.">
+Discuss Your Website
+</a>
 
 </section>
 
-<!-- PRODUCT DASHBOARD -->
 
-<section class="section">
+<!-- CLIENT -->
 
-<h2>Real-Time Marketing Dashboard</h2>
+<div class="container">
 
-<div class="dashboard">
+<h2>Client</h2>
 
-<div class="stats">
+<div class="case">
 
-<div class="stat">
-<h4>Conversion Rate</h4>
-<div class="chart"></div>
-</div>
+<h3>Urban Bites Restaurant</h3>
 
-<div class="stat">
-<h4>Revenue Growth</h4>
-<div class="chart"></div>
-</div>
+<p>
+Urban Bites adalah restaurant casual dining yang ingin meningkatkan
+kehadiran online mereka dan menarik lebih banyak pelanggan
+melalui website modern yang mobile friendly.
+</p>
 
-<div class="stat">
-<h4>Campaign Performance</h4>
-<div class="chart"></div>
 </div>
 
 </div>
 
-<table class="table">
 
-<tr>
-<th>Campaign</th>
-<th>Status</th>
-<th>Leads</th>
-<th>Conversion</th>
-</tr>
+<!-- PROJECT OVERVIEW -->
 
-<tr>
-<td>Spring Launch</td>
-<td>Active</td>
-<td>1,240</td>
-<td>8.3%</td>
-</tr>
+<div class="container section">
 
-<tr>
-<td>Email Funnel</td>
-<td>Running</td>
-<td>980</td>
-<td>6.7%</td>
-</tr>
+<h2>Project Overview</h2>
 
-<tr>
-<td>Ad Campaign</td>
-<td>Paused</td>
-<td>2,340</td>
-<td>9.1%</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-<!-- DEVICE PREVIEW -->
-
-<section class="section">
-
-<h2>Available Across All Devices</h2>
-
-<div class="devices">
-
-<img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=900">
-<img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=900">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=900">
-
-</div>
-
-</section>
-
-<!-- PRODUCT FLOW -->
-
-<section class="section">
-
-<h2>How NovaGrowth Works</h2>
-
-<div class="flow">
-
-<div class="step">
-<h3>Capture Leads</h3>
-<p>Collect high quality leads from multiple marketing channels.</p>
-</div>
-
-<div class="arrow">→</div>
-
-<div class="step">
-<h3>AI Analyze</h3>
-<p>Our AI analyzes behavior and predicts buying intent.</p>
-</div>
-
-<div class="arrow">→</div>
-
-<div class="step">
-<h3>Launch Campaign</h3>
-<p>Automatically launch optimized marketing campaigns.</p>
-</div>
-
-<div class="arrow">→</div>
-
-<div class="step">
-<h3>Track Growth</h3>
-<p>Monitor revenue growth and conversion metrics in real time.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATURES -->
-
-<section class="section">
-
-<h2>Platform Features</h2>
-
-<div class="features">
+<div class="grid">
 
 <div class="card">
-<h3>Campaign Automation</h3>
-<p>Create and launch high converting campaigns automatically.</p>
+<h3>Role</h3>
+<p>Frontend Developer</p>
 </div>
 
 <div class="card">
-<h3>Customer Insights</h3>
-<p>Understand customer behavior with advanced analytics.</p>
+<h3>Industry</h3>
+<p>Restaurant / Food Business</p>
 </div>
 
 <div class="card">
-<h3>Lead Intelligence</h3>
-<p>Identify high value leads and improve targeting.</p>
+<h3>Tools</h3>
+<p>HTML, CSS, Responsive Design</p>
 </div>
 
 <div class="card">
-<h3>Conversion Optimization</h3>
-<p>Increase marketing ROI with data driven optimization.</p>
+<h3>Goal</h3>
+<p>Membuat website restaurant yang modern dan mudah diakses.</p>
 </div>
 
 </div>
+
+</div>
+
+
+<!-- PROBLEM -->
+
+<div class="container section">
+
+<h2>Problem</h2>
+
+<p>
+Website lama terlihat outdated dan tidak mobile friendly.
+Pelanggan kesulitan menemukan menu dan informasi lokasi restaurant.
+</p>
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+
+</div>
+
+
+<!-- SOLUTION -->
+
+<div class="container section">
+
+<h2>Solution</h2>
+
+<p>
+Landing page restaurant dengan visual makanan kuat,
+layout modern, dan navigasi sederhana agar pelanggan
+dapat dengan cepat melihat menu dan informasi lokasi.
+</p>
+
+<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+
+</div>
+
+
+<!-- RESTAURANT EXPERIENCE -->
+
+<div class="container section">
+
+<h2>Restaurant Experience</h2>
+
+<div class="grid">
+
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9">
+
+<img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17">
+
+</div>
+
+<p style="margin-top:20px">
+Website dirancang untuk menampilkan pengalaman makan yang
+menggugah selera melalui visual makanan berkualitas tinggi,
+sehingga pelanggan tertarik untuk datang langsung ke restaurant.
+</p>
+
+</div>
+
+
+<!-- DESIGN HIGHLIGHTS -->
+
+<div class="container section">
+
+<h2>Design Highlights</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Visual Food Photography</h3>
+<p>Foto makanan berkualitas tinggi untuk menarik perhatian pelanggan.</p>
+</div>
+
+<div class="card">
+<h3>Clear Menu Layout</h3>
+<p>Menu restaurant ditampilkan dengan layout yang mudah dibaca.</p>
+</div>
+
+<div class="card">
+<h3>Mobile Friendly</h3>
+<p>Website dioptimalkan untuk smartphone.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MY PROCESS -->
+
+<div class="container section">
+
+<h2>My Process</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>1. Research</h3>
+<p>Menganalisis target pelanggan dan kebutuhan bisnis restaurant.</p>
+</div>
+
+<div class="card">
+<h3>2. Design</h3>
+<p>Mendesain layout modern dengan fokus pada visual makanan.</p>
+</div>
+
+<div class="card">
+<h3>3. Development</h3>
+<p>Membangun website responsif yang cepat dan mobile friendly.</p>
+</div>
+
+<div class="card">
+<h3>4. Launch</h3>
+<p>Website siap digunakan untuk meningkatkan kehadiran online restaurant.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RESULT -->
+
+<div class="container section">
+
+<h2>Project Result</h2>
+
+<div class="result">
+
+<div class="result-box">
+<h3>Modern Design</h3>
+<p>Website terlihat lebih profesional</p>
+</div>
+
+<div class="result-box">
+<h3>Mobile Friendly</h3>
+<p>Tampilan optimal di semua perangkat</p>
+</div>
+
+<div class="result-box">
+<h3>Better Branding</h3>
+<p>Meningkatkan kepercayaan pelanggan</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT IMPACT -->
+
+<div class="container section">
+
+<h2>Project Impact</h2>
+
+<div class="result">
+
+<div class="result-box">
+<h3>+40%</h3>
+<p>Better visual engagement</p>
+</div>
+
+<div class="result-box">
+<h3>Mobile Optimized</h3>
+<p>Improved smartphone experience</p>
+</div>
+
+<div class="result-box">
+<h3>Modern Branding</h3>
+<p>Stronger online presence</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TESTIMONIAL -->
+
+<section class="quote">
+
+<p>
+"Website baru ini membuat restaurant kami terlihat jauh lebih profesional
+dan pelanggan lebih mudah menemukan informasi menu."
+</p>
 
 </section>
 
-<!-- METRICS -->
-
-<section class="section">
-
-<h2>Trusted by Growth Teams</h2>
-
-<div class="metrics">
-
-<div class="metric">
-<h3>+230%</h3>
-<p>Revenue Growth</p>
-</div>
-
-<div class="metric">
-<h3>3.2M</h3>
-<p>Leads Generated</p>
-</div>
-
-<div class="metric">
-<h3>98%</h3>
-<p>Customer Satisfaction</p>
-</div>
-
-</div>
-
-</section>
 
 <!-- CTA -->
 
 <section class="cta">
 
-<h2>Ready to Scale Your Marketing?</h2>
+<h2>Own a Restaurant?</h2>
 
-<p>Start using NovaGrowth today and unlock real business growth.</p>
+<p>
+Jika Anda memiliki restaurant dan ingin website modern seperti ini,
+saya bisa membantu membuat website profesional untuk bisnis Anda.
+</p>
 
-<a class="btn" href="#">Start Free Trial</a>
+<a href="https://wa.me/6281338693093?text=Hi%20RiusDev,%20saya%20punya%20restaurant%20dan%20ingin%20website.">
+Start Your Project
+</a>
 
 </section>
 
-<footer>
 
-Project Showcase — Designed by Rius Dev
+<!-- BACK -->
 
-</footer>
+<div class="container section" style="text-align:center">
+
+<a href="https://riusdev.github.io/"
+style="display:inline-block;background:#eee;padding:12px 24px;border-radius:6px;text-decoration:none">
+
+← Back to Portfolio
+
+</a>
+
+</div>
+
 
 </body>
   </html>
